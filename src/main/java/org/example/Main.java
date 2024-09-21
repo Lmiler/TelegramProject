@@ -11,6 +11,7 @@ public class Main {
         try {
             TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
             botsApi.registerBot(new SurveyBot(username, token));
+            System.out.println("Bot is up and running!");
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
